@@ -1,103 +1,47 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prem Gautam | Portfolio</title>
 
-/* BODY */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    text-align: center;
-    color: white;
-    animation: fadeIn 1s ease-in;
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-/* HEADER */
-header {
-    background: rgba(0, 0, 50, 0.7);
-    color: white;
-    padding: 15px;
-    font-size: 22px;
-    backdrop-filter: blur(10px);
-    animation: slideDown 1s ease;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-/* PROFILE IMAGE */
-.profile {
-    width: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
+<body>
 
-    box-shadow: 0 0 20px rgba(0, 198, 255, 0.7);
-    animation: float 4s ease-in-out infinite;
-}
+<!-- HEADER -->
+<header>
+    <h2>Prem Gautam</h2>
+</header>
 
-/* SECTION */
-section {
-    padding: 40px 20px;
-    animation: fadeUp 1.2s ease;
-}
+<!-- HOME SECTION -->
+<section>
 
-/* TEXT */
-h1 {
-    font-size: 36px;
-    margin-top: 15px;
-}
+    <img src="assets/profile.jpg" class="profile" alt="Prem Image">
 
-h2 {
-    margin-top: 10px;
-    color: #a0e9ff;
-}
+    <h1>Hi, I'm Prem Gautam</h1>
 
-p {
-    margin-top: 10px;
-    line-height: 1.6;
-    color: #d0e7ff;
-}
+    <h2>B.Tech CSE (AI & ML) Student</h2>
 
-/* DARK MODE */
-.dark-mode {
-    background: #050505;
-    color: white;
-}
+    <p>
+        I am a 1st year student at MIT VPU University,
+        passionate about Artificial Intelligence, Machine Learning,
+        and modern technology.
+    </p>
 
-/* ANIMATIONS */
+    <p>
+        I am also a freelance graphic designer and currently
+        learning coding to build creative and impactful digital solutions.
+    </p>
 
-/* Fade In */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+    <button onclick="toggleDarkMode()">🌙 Toggle Mode</button>
 
-/* Slide Down Header */
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+</section>
 
-/* Fade Up Section */
-@keyframes fadeUp {
-    from {
-        transform: translateY(40px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+<script src="script.js"></script>
 
-/* Floating Profile */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
-}
+</body>
+</html>
