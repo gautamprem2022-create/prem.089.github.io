@@ -2,56 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prem R Gautam | Portfolio</title>
+    <title>Prem Gautam Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <h2 class="logo">Prem</h2>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+<header>
+    <h1>Prem Gautam</h1>
+    <button onclick="toggleDarkMode()">🌙</button>
+</header>
 
-<!-- HOME SECTION -->
-<section class="home">
+<section id="home">
+    <img src="assets/images/profile.jpg" class="profile">
+    <h2>Hello! I'm Prem</h2>
+    <p>A passionate student interested in AI, technology, and innovation.</p>
+</section>
 
-    <!-- TEXT -->
-    <div class="home-text">
-        <h1>Hi, I'm <span>Prem R Gautam</span></h1>
+<section id="about">
+    <h2>About Me</h2>
+    <p><b>Education:</b> Student</p>
+    <p><b>Interests:</b> AI, Coding, Design Thinking</p>
+    <p><b>Goals:</b> Become a skilled software developer</p>
+    <p><b>Strengths:</b> Problem solving, creativity, teamwork</p>
+</section>
 
-        <h3>B.Tech CSE (AI & ML) Student</h3>
+<section id="achievements">
+    <h2>Achievements & Certificates</h2>
 
-        <p>
-            I am a 1st year student at MIT VPU University,
-            passionate about Artificial Intelligence, Machine Learning,
-            and creative design.
-        </p>
-
-        <p>
-            I work as a freelance graphic designer and I am currently
-            learning coding to build modern and impactful digital solutions.
-        </p>
-
-        <button onclick="toggleDarkMode()">🌙 Toggle Mode</button>
+    <div class="card">
+        <h3>Yuva AI for All</h3>
+        <p>Completed AI training program by NASSCOM.</p>
+        <a href="assets/certificates/yuva_ai4all.pdf" target="_blank">View Certificate</a>
     </div>
 
-    <!-- IMAGE -->
-    <div class="home-image">
-        <img src="assets/images/profile.jpg" alt="Prem Image">
+    <div class="card">
+        <h3>Cisco AI Course</h3>
+        <p>Introduction to Modern AI by Cisco Networking Academy.</p>
+        <a href="assets/certificates/cisco_ai.pdf" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="card">
+        <h3>Coursera / Netacad / Yuva</h3>
+        <p>Completed multiple online certifications in AI and technology.</p>
     </div>
 
 </section>
 
-<!-- FOOTER -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>AI4A Project</h3>
+        <p>AI-based learning project under Yuva AI program.</p>
+    </div>
+
+    <div class="card">
+        <h3>Design Thinking Project</h3>
+        <p>Focused on innovation and problem solving using design thinking.</p>
+    </div>
+
+    <div class="card">
+        <h3>ACE Project</h3>
+        <p>Applied coding and analytical skills in real-world scenarios.</p>
+    </div>
+
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <img src="assets/images/profile.jpg">
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: prem@email.com</p>
+    <p>Phone: +91 7900129497</p>
+    <p>LinkedIn: prem-link</p>
+    <p>GitHub: prem-github</p>
+</section>
+
 <footer>
-    <p>© 2026 Prem R Gautam</p>
+    <p>© 2026 Prem Gautam</p>
 </footer>
 
 <script src="script.js"></script>
