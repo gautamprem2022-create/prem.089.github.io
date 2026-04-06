@@ -5,104 +5,87 @@
     box-sizing: border-box;
 }
 
-/* BODY with animated gradient */
+/* BODY */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
-    background-size: 600% 600%;
-    color: white;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     text-align: center;
-
-    animation: gradientMove 10s ease infinite, fadeIn 1.2s ease-in;
+    color: white;
+    animation: fadeIn 1s ease-in;
 }
 
 /* HEADER */
 header {
     background: rgba(0, 0, 50, 0.7);
+    color: white;
     padding: 15px;
     font-size: 22px;
     backdrop-filter: blur(10px);
-
     animation: slideDown 1s ease;
-}
-
-/* SECTION */
-.home {
-    padding: 60px 20px;
 }
 
 /* PROFILE IMAGE */
 .profile {
-    width: 160px;
+    width: 150px;
     border-radius: 50%;
     margin-top: 20px;
 
-    box-shadow: 0 0 25px rgba(0, 198, 255, 0.6);
-
-    animation: float 4s ease-in-out infinite, fadeUp 1.2s ease;
+    /* Glow + animation */
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.7);
+    animation: float 4s ease-in-out infinite;
 }
 
-/* TEXT ANIMATIONS */
-h1 {
-    font-size: 36px;
-    margin-top: 20px;
-
+/* SECTION */
+section {
+    padding: 30px;
     animation: fadeUp 1.2s ease;
 }
 
-h2 {
-    margin-top: 10px;
-    color: #a0e9ff;
+/* CARD */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    width: 260px;
 
-    animation: fadeUp 1.4s ease;
-}
+    backdrop-filter: blur(10px);
 
-p {
-    margin-top: 12px;
-    line-height: 1.6;
-    color: #d0e7ff;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-
-    animation: fadeUp 1.6s ease;
-}
-
-/* BUTTON */
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    color: white;
-    border-radius: 25px;
-    cursor: pointer;
-
-    animation: fadeUp 1.8s ease;
     transition: 0.3s;
 }
 
-/* BUTTON HOVER GLOW */
-button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 15px #00c6ff;
+/* CARD HOVER */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.6);
+}
+
+/* IMAGE */
+img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
 
 /* DARK MODE */
 .dark-mode {
     background: #050505;
+    color: white;
 }
 
-/* ================= ANIMATIONS ================= */
-
-/* Background Gradient Animation */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.dark-mode .card {
+    background: rgba(255, 255, 255, 0.08);
 }
 
-/* Fade In Page */
+/* ANIMATIONS */
+
+/* Fade In */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -120,7 +103,7 @@ button:hover {
     }
 }
 
-/* Fade Up Elements */
+/* Fade Up Section */
 @keyframes fadeUp {
     from {
         transform: translateY(40px);
