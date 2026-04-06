@@ -1,91 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Prem Gautam Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<header>
-    <h1>Prem Gautam</h1>
-    <button onclick="toggleDarkMode()">🌙</button>
-</header>
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in;
+}
 
-<section id="home">
-    <img src="assets/images/profile.jpg" class="profile">
-    <h2>Hello! I'm Prem</h2>
-    <p>A passionate student interested in AI, technology, and innovation.</p>
-</section>
+/* HEADER */
+header {
+    background: rgba(0, 0, 50, 0.7);
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    backdrop-filter: blur(10px);
+    animation: slideDown 1s ease;
+}
 
-<section id="about">
-    <h2>About Me</h2>
-    <p><b>Education:</b> Student</p>
-    <p><b>Interests:</b> AI, Coding, Design Thinking</p>
-    <p><b>Goals:</b> Become a skilled software developer</p>
-    <p><b>Strengths:</b> Problem solving, creativity, teamwork</p>
-</section>
+/* PROFILE IMAGE */
+.profile {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
 
-<section id="achievements">
-    <h2>Achievements & Certificates</h2>
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.7);
+    animation: float 4s ease-in-out infinite;
+}
 
-    <div class="card">
-        <h3>Yuva AI for All</h3>
-        <p>Completed AI training program by NASSCOM.</p>
-        <a href="assets/certificates/yuva_ai4all.pdf" target="_blank">View Certificate</a>
-    </div>
+/* SECTION */
+section {
+    padding: 40px 20px;
+    animation: fadeUp 1.2s ease;
+}
 
-    <div class="card">
-        <h3>Cisco AI Course</h3>
-        <p>Introduction to Modern AI by Cisco Networking Academy.</p>
-        <a href="assets/certificates/cisco_ai.pdf" target="_blank">View Certificate</a>
-    </div>
+/* TEXT */
+h1 {
+    font-size: 36px;
+    margin-top: 15px;
+}
 
-    <div class="card">
-        <h3>Coursera / Netacad / Yuva</h3>
-        <p>Completed multiple online certifications in AI and technology.</p>
-    </div>
+h2 {
+    margin-top: 10px;
+    color: #a0e9ff;
+}
 
-</section>
+p {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #d0e7ff;
+}
 
-<section id="projects">
-    <h2>Projects</h2>
+/* DARK MODE */
+.dark-mode {
+    background: #050505;
+    color: white;
+}
 
-    <div class="card">
-        <h3>AI4A Project</h3>
-        <p>AI-based learning project under Yuva AI program.</p>
-    </div>
+/* ANIMATIONS */
 
-    <div class="card">
-        <h3>Design Thinking Project</h3>
-        <p>Focused on innovation and problem solving using design thinking.</p>
-    </div>
+/* Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-    <div class="card">
-        <h3>ACE Project</h3>
-        <p>Applied coding and analytical skills in real-world scenarios.</p>
-    </div>
+/* Slide Down Header */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-</section>
+/* Fade Up Section */
+@keyframes fadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-<section id="gallery">
-    <h2>Gallery</h2>
-    <img src="assets/images/profile.jpg">
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>Phone: +91 XXXXXXXX</p>
-    <p>LinkedIn: your-link</p>
-    <p>GitHub: your-github</p>
-</section>
-
-<footer>
-    <p>© 2026 Prem Gautam</p>
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+/* Floating Profile */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
