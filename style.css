@@ -1,115 +1,185 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prem Gautam | Portfolio</title>
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #1c3b50, #2c5364);
+    color: white;
+    overflow-x: hidden;
+}
 
-        .intro-container {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 50px;
-            border-radius: 20px;
-            max-width: 600px;
-            width: 90%;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        }
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
 
-        /* Profile Photo */
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #fff;
-            margin-bottom: 20px;
-        }
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #e0f7fa;
-        }
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00c6ff;
+    letter-spacing: 1px;
+}
 
-        h2 {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-            font-weight: 400;
-            color: #b3e5fc;
-        }
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
 
-        p {
-            font-size: 1em;
-            line-height: 1.6;
-            color: #d1ecf1;
-        }
+.navbar ul li {
+    margin-left: 30px;
+}
 
-        .highlight {
-            color: #81d4fa;
-            font-weight: bold;
-        }
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
 
-        /* Optional Button */
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            font-size: 1em;
-            color: #1e3c72;
-            background-color: #81d4fa;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
+/* Underline hover effect */
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00c6ff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
 
-        .btn:hover {
-            background-color: #4fc3f7;
-            transform: translateY(-3px);
-        }
+.navbar ul li a:hover::after {
+    width: 100%;
+}
 
-        @media (max-width: 600px) {
-            .intro-container {
-                padding: 30px 20px;
-            }
-            h1 { font-size: 1.5em; }
-            h2 { font-size: 1em; }
-        }
-    </style>
-</head>
-<body>
+/* HOME */
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 90vh;
+    padding: 60px;
+}
 
-    <div class="intro-container">
-        <!-- Add your image in images/profile.jpg -->
-        <img src="images/profile.jpg" alt="Prem Gautam" class="profile-photo">
+/* TEXT */
+.home-text {
+    max-width: 550px;
+    animation: fadeIn 1.2s ease-in-out;
+}
 
-        <h1>Prem Gautam</h1>
-        <h2>B.Tech CSE AI/ML 1st Year, MIT VPU University</h2>
-        <p>
-            I am a freelance <span class="highlight">graphic designer</span> and a student learning coding. Passionate about AI, Machine Learning, and creating impactful digital experiences.
-        </p>
+.home-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
 
-        <!-- Optional Button -->
-        <a href="#contact" class="btn">Get in Touch</a>
-    </div>
+.home-text span {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
-</body>
-</html>
+.home-text h3 {
+    margin: 10px 0;
+    color: #a0e9ff;
+    font-weight: 500;
+}
+
+.home-text p {
+    margin: 15px 0;
+    line-height: 1.7;
+    color: #d0e7ff;
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 198, 255, 0.6);
+}
+
+/* IMAGE */
+.home-image img {
+    width: 320px;
+    border-radius: 20px;
+
+    /* Glow + glass border */
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 30px rgba(0, 198, 255, 0.5);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* DARK MODE */
+.dark-mode {
+    background: #050505;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-image img {
+        margin-top: 30px;
+        width: 250px;
+    }
+}
