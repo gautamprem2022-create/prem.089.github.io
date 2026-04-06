@@ -5,13 +5,15 @@
     box-sizing: border-box;
 }
 
-/* BODY */
+/* BODY with animated gradient */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    text-align: center;
+    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+    background-size: 600% 600%;
     color: white;
-    animation: fadeIn 1s ease-in;
+    text-align: center;
+
+    animation: gradientMove 10s ease infinite, fadeIn 1.2s ease-in;
 }
 
 /* HEADER */
@@ -20,13 +22,13 @@ header {
     padding: 15px;
     font-size: 22px;
     backdrop-filter: blur(10px);
+
     animation: slideDown 1s ease;
 }
 
 /* SECTION */
-section {
-    padding: 50px 20px;
-    animation: fadeUp 1.2s ease;
+.home {
+    padding: 60px 20px;
 }
 
 /* PROFILE IMAGE */
@@ -35,25 +37,35 @@ section {
     border-radius: 50%;
     margin-top: 20px;
 
-    box-shadow: 0 0 25px rgba(0, 198, 255, 0.7);
-    animation: float 4s ease-in-out infinite;
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.6);
+
+    animation: float 4s ease-in-out infinite, fadeUp 1.2s ease;
 }
 
-/* TEXT */
+/* TEXT ANIMATIONS */
 h1 {
-    font-size: 38px;
+    font-size: 36px;
     margin-top: 20px;
+
+    animation: fadeUp 1.2s ease;
 }
 
 h2 {
     margin-top: 10px;
     color: #a0e9ff;
+
+    animation: fadeUp 1.4s ease;
 }
 
 p {
     margin-top: 12px;
     line-height: 1.6;
     color: #d0e7ff;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    animation: fadeUp 1.6s ease;
 }
 
 /* BUTTON */
@@ -65,11 +77,15 @@ button {
     color: white;
     border-radius: 25px;
     cursor: pointer;
+
+    animation: fadeUp 1.8s ease;
     transition: 0.3s;
 }
 
+/* BUTTON HOVER GLOW */
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #00c6ff;
 }
 
 /* DARK MODE */
@@ -77,12 +93,22 @@ button:hover {
     background: #050505;
 }
 
-/* ANIMATIONS */
+/* ================= ANIMATIONS ================= */
+
+/* Background Gradient Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fade In Page */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* Slide Down Header */
 @keyframes slideDown {
     from {
         transform: translateY(-50px);
@@ -94,6 +120,7 @@ button:hover {
     }
 }
 
+/* Fade Up Elements */
 @keyframes fadeUp {
     from {
         transform: translateY(40px);
@@ -105,6 +132,7 @@ button:hover {
     }
 }
 
+/* Floating Profile */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-12px); }
