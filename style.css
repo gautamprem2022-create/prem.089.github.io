@@ -1,7 +1,5 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +7,10 @@
     font-family: 'Outfit', sans-serif;
 }
 
-/* ROOT COLORS */
 :root {
     --primary: #00d2ff;
     --secondary: #3a7bd5;
     --bg: #030a16;
-    --card: rgba(255,255,255,0.05);
 }
 
 /* BODY */
@@ -25,26 +21,21 @@ body {
 }
 
 /* LOADER */
-body::before {
-    content: "LOADING...";
+.loader {
     position: fixed;
     inset: 0;
     background: var(--bg);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--primary);
-    font-weight: 800;
-    letter-spacing: 3px;
-    animation: fadeOut 2s forwards;
     z-index: 9999;
+    font-weight: bold;
+    color: var(--primary);
+    animation: fadeOut 2s forwards;
 }
 
 @keyframes fadeOut {
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
+    100% { opacity: 0; visibility: hidden; }
 }
 
 /* GLOW BACKGROUND */
@@ -56,29 +47,17 @@ body::before {
     z-index: -1;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 1.5s ease;
-    text-align: center;
+    animation: fadeUp 1.5s ease;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-top: 10px;
-}
-
-/* FADE IN */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* PROFILE IMAGE */
+/* PROFILE */
 .profile-container {
     width: 180px;
     height: 180px;
@@ -94,12 +73,16 @@ body::before {
     border-radius: inherit;
 }
 
-/* FLOAT */
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes float {
     50% { transform: translateY(-15px); }
 }
 
-/* MORPH SHAPE */
 @keyframes morph {
     0% { border-radius: 30% 70%; }
     50% { border-radius: 50% 50%; }
@@ -110,50 +93,49 @@ body::before {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
+    gap: 25px;
     padding: 40px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
-    background: var(--card);
+    background: rgba(255,255,255,0.05);
     padding: 15px;
     border-radius: 15px;
-    transition: 0.4s;
+    transform: translateY(50px);
     opacity: 0;
-    transform: translateY(40px);
+    transition: 0.6s;
 }
 
-/* REVEAL ACTIVE */
-.card.active {
-    opacity: 1;
+/* REVEAL */
+.card.show {
     transform: translateY(0);
+    opacity: 1;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,210,255,0.3);
+    transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0,210,255,0.3);
 }
 
-/* IMAGES */
+/* IMAGE */
 .card img {
     width: 100%;
     border-radius: 10px;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .card img:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 /* BUTTON */
 button {
     padding: 10px 18px;
+    background: var(--primary);
     border: none;
     border-radius: 8px;
-    background: var(--primary);
-    color: black;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -161,16 +143,4 @@ button {
 button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px var(--primary);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .profile-container {
-        width: 140px;
-        height: 140px;
-    }
 }
