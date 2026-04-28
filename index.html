@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prem gautam | Student Portfolio</title>
+<title>Prem Gautam | Student Portfolio</title>
 
 <style>
-
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -15,13 +13,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BODY */
 body {
     background: #ecfdf5;
     color: #1f2937;
 }
 
-/* NAVBAR */
 nav {
     background: #065f46;
     padding: 15px;
@@ -33,7 +29,6 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -43,34 +38,15 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav button {
-    background: #22c55e;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* HOME */
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px;
     background: linear-gradient(135deg, #065f46, #22c55e);
     color: white;
 }
 
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid white;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
 section {
-    padding: 40px 20px;
+    padding: 40px;
     max-width: 1000px;
     margin: auto;
 }
@@ -81,40 +57,13 @@ h2 {
     color: #065f46;
 }
 
-/* CARD */
 .card {
     background: white;
     padding: 20px;
     margin: 15px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* GALLERY */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
     border-radius: 10px;
 }
 
-/* BUTTON */
-button {
-    padding: 10px 18px;
-    background: #16a34a;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-/* DARK MODE */
 body.dark {
     background: #111827;
     color: white;
@@ -123,276 +72,86 @@ body.dark {
 body.dark .card {
     background: #1f2937;
 }
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #065f46;
-    color: white;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
 <ul>
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About Me</a></li>
-
-<li><a href="#projects">Projects</a></li>
-<li><a href="#gallery">Gallery</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#courses">Courses</a></li>
 <li><a href="#contact">Contact</a></li>
-<li><button onclick="toggleDarkMode()">🌙 Dark Mode</button></li>
 </ul>
 </nav>
 
 <!-- HOME -->
-<header id="home">
-<img src="assets/Image .jpeg.jpeg" alt="Profile Photo" class="profile-img">
+<<header id="home">
+
+<img src="assets/profile.jpg" alt="Prem Gautam" class="profile-img">
 
 <h1>Prem Gautam</h1>
+<p>B.Tech CSE (AI & ML) Student</p>
+<p>MIT VPU University</p>
 
-<p>
-B.Tech CSE (AI & ML) Student — 1st Year  
-</p>
+</header>>
 
-<p>
-MIT VPU University
-</p>
-
-<p>
-Passionate about programming, Artificial Intelligence, and building innovative solutions.
-</p>
-
-</header>
-
-<!-- ABOUT ME -->
+<!-- ABOUT -->
 <section id="about">
-
 <h2>About Me</h2>
 
 <div class="card">
-
-<h3>Education</h3>
-
 <p>
-Currently pursuing B.Tech in Computer Science Engineering  
-(Artificial Intelligence & Machine Learning)  
-from MIT VPU University.
+I am Prem Gautam, a first-year B.Tech Computer Science student specializing in 
+Artificial Intelligence and Machine Learning (AI & ML). I am part of the AILM class 
+where I learn the basics of AI, machine learning, and modern technologies.
+
+I am passionate about coding, building projects, and exploring how AI can solve 
+real-world problems. I enjoy learning new skills and improving my technical knowledge.
 </p>
-
-</div>
-
-<div class="card">
-
-<h3>Interests</h3>
-
-<ul>
-<li>Programming</li>
-<li>Web Development</li>
-<li>Artificial Intelligence</li>
-<li>Problem Solving</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Goals</h3>
-
-<p>
-To become a skilled software engineer and develop innovative technology solutions.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Strengths</h3>
-
-<ul>
-<li>Quick learner</li>
-<li>Hardworking</li>
-<li>Teamwork</li>
-<li>Logical thinking</li>
-</ul>
-
 </div>
 
 </section>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-
-<h2>Achievements & Certificates</h2>
+<!-- COURSES -->
+<section id="courses">
+<h2>Courses & Certificates</h2>
 
 <div class="card">
-<h3>AI4A Project</h3>
-
-<p>
-Completed Artificial Intelligence for All (AI4A) project.
-</p>
-
-<img src="assets/AI.png" width="100%">
-
+<h3>MATLAB Programming Course</h3>
+<img src="assets/matlab_certificate.jpg" width="100%" style="border-radius:10px;">
 </div>
 
 <div class="card">
-
-
-<p>
-Participated in ACE program to improve technical and communication skills.
-</p>
-
-<img src="assets/88724219.cms_.jpg" width="100%">
-
-</div>
-
-<div class="card">
-
-<h3>Coursera Certificate</h3>
-
-<img src="assets/Screenshot 2026-04-07 132330.png" width="100%">
-
-</div>
-
-<div class="card">
-
-<h3>MATLAB Certificate</h3>
-
-<img src="assets/Screenshot 2026-04-07 132806.png" width="100%">
-
-</div>
-
-<div class="card">
-
 <h3>Yuva AI Certificate</h3>
-
-<img src="assets/AI.png" width="100%">
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="card">
-
-<h3>Student Digital Portfolio Website</h3>
-
-<img src="assets/project1.png" width="100%">
-
-<p>
-A responsive portfolio website developed using HTML, CSS, and JavaScript.
-</p>
-
-<a href="https://github.com/yourusername/project1" target="_blank">
-<button>View Project</button>
-</a>
-
+<img src="assets/yuva_ai_certificate.jpg" width="100%" style="border-radius:10px;">
 </div>
 
 <div class="card">
-
-<h3>Number Guessing Game</h3>
-
-<img src="assets/project2.png" width="100%">
-
-<p>
-A JavaScript-based game where users guess a random number.
-</p>
-
-<a href="https://github.com/yourusername/project2" target="_blank">
-<button>View Project</button>
-</a>
-
+<h3>Introduction to Modern AI</h3>
+<img src="assets/modern_ai_certificate.jpg" width="100%" style="border-radius:10px;">
 </div>
 
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
-
-<h2>Gallery</h2>
-
-<div class="gallery">
-
-<img src="assets/profile.jpg">
-
-<img src="assets/ai4a_certificate.jpg">
-
-<img src="assets/design_thinking_certificate.jpg">
-
-<img src="assets/ace_certificate.jpg">
-
-<img src="assets/coursera_certificate.jpg">
-
-<img src="assets/netacad_certificate.jpg">
-
-<img src="assets/yuva_ai_certificate.jpg">
-
-</div>
-
-</section>
 
 <!-- CONTACT -->
 <section id="contact">
-
-<h2>Contact Information</h2>
+<h2>Contact</h2>
 
 <div class="card">
-
-<p>
-Email: rehanbagwan7219@gmail.com
-</p>
-
-<p>
-Phone: +91 9226754350
-</p>
-
-
-
-</p>
-
-<p>
-GitHub: https://github.com/rehanbagwan721.github.io
-</p>
-
+<p>Email: your@email.com</p>
+<p>Phone: +91 XXXXX XXXXX</p>
 </div>
 
 </section>
 
-<footer>
-
-<p>
-© 2026Prem Gautan | Student Digital Portfolio
-</p>
-
-</footer>
-
 <script>
-
 function toggleDarkMode() {
     document.body.classList.toggle("dark");
 }
-
-/* Smooth Scroll */
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
 </script>
 
 </body>
