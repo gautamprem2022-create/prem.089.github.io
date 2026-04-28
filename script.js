@@ -1,17 +1,21 @@
-const toggleBtn = document.getElementById('dark-mode-toggle');
+<script>
 
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    toggleBtn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+// Mouse glow
+document.addEventListener("mousemove", (e) => {
+    document.documentElement.style.setProperty('--x', e.clientX + 'px');
+    document.documentElement.style.setProperty('--y', e.clientY + 'px');
 });
 
-// Simple Image Zoom Effect for Gallery
-document.querySelectorAll('.gallery-item img').forEach(image => {
-    image.onclick = () => {
-        image.style.transform = image.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)';
-        image.style.zIndex = "100";
-        image.style.position = "relative";
-        image.style.transition = "0.3s";
-    };
-});sprict
+// Scroll reveal
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            card.classList.add("show");
+        }
+    });
+});
+
+</script>
